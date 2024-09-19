@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <title>Mike Provenzano's Portfolio</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
 
 <style>
 canvas {
@@ -62,8 +63,16 @@ scene.add(pointLight, ambientLight);
 const lightHelper = new THREE.PointLightHelper(pointLight);
 scene.add(lightHelper);
 
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;  // Adds smooth transitions
+controls.dampingFactor = 0.25;  // Adjusts the damp effect
+controls.enableZoom = true;     // Allows zooming
+
+
+
 function animate() {
   requestAnimationFrame(animate);
+  controls.update();
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.05;
   cube.rotation.z += 0.01;
