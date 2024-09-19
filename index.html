@@ -54,8 +54,10 @@ const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5,5,5);
-scene.add(pointLight);
+pointLight.position.set(45,45,45);
+
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene.add(pointLight, ambientLight);
 
 function animate() {
   requestAnimationFrame(animate);
