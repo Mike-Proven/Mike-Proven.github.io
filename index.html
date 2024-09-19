@@ -33,7 +33,7 @@ body {
 
 
 </body></html>
-
+<!--SOMETIMES THE PROBLEM IS NOT UPDATING FAST ENOUGH, REMEMBER F12-->
 
 <script>
 const canvas = document.getElementById('myCanvas');
@@ -45,7 +45,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 5;
 
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
