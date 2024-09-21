@@ -206,7 +206,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 		};
 
-	}();
+	};// my edit();
 
 	this.dispose = function() {
 
