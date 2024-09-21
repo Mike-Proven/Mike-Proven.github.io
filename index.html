@@ -20,9 +20,6 @@
 <!-- Three.js CDN (unpkg) -->
 <script src="https://unpkg.com/three@0.148.0/build/three.min.js"></script>
 
-<!-- OrbitControls (unpkg) -->
-<script src="https://raw.githubusercontent.com/mrdoob/three.js/refs/heads/master/examples/jsm/controls/OrbitControls.js"></script>
-
 
 <style>
   canvas {
@@ -78,15 +75,12 @@
   const lightHelper = new THREE.PointLightHelper(pLight);
   scene.add(lightHelper);
 
-  // OrbitControls
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
+ 
   function animate() {
       requestAnimationFrame(animate);
       cube.rotation.x += 0.01;
       //cube.rotation.y += 0.01;
       cube.rotation.z += 0.01;
-      //controls.update();  // only required if controls.enableDamping = true, or if controls.autoRotate = true
       renderer.render(scene, camera);
   }
   animate();
