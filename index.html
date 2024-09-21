@@ -17,12 +17,11 @@
   <meta name="author" content="Mike Provenzano">
  -->
 
-    <!-- Three.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+    <!-- Three.js CDN (jsDelivr) -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
 
-    <!-- OrbitControls CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/examples/js/controls/OrbitControls.js"></script>
-
+<!-- OrbitControls (jsDelivr) -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.148.0/examples/js/controls/OrbitControls.js"></script>
 
 </head><body style="background-color: #000; color: #fff;"><!-- ^^^ END HEAD ^^^ -->
 <canvas id="canvas"></canvas>
@@ -43,13 +42,13 @@
 </div>
 -->
 <script>
-  const canvas = document.getElementById('canvas');
-
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+  const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#canvas'), });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
+
+  camera.position.z = 30;
 
   // Adding an object (cube)
   const geometry = new THREE.BoxGeometry();
@@ -59,8 +58,6 @@
 
   // OrbitControls
   //const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-  camera.position.z = 3;
 
   function animate() {
       requestAnimationFrame(animate);
