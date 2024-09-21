@@ -16,6 +16,15 @@ body {
 	color: #ff0;
 }
 
+canvas {
+	display: block;
+	margin: 10px auto;
+	border: 1px #ff0 solid;
+	position:fixed;
+	top: 0px;
+	left: 0px;
+}
+
 .list {
 	display:block;
 	margin: 10px;
