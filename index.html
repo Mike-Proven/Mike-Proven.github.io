@@ -47,7 +47,7 @@
 #right {
   position: absolute;
   top: 50%;
-  right: 15%;
+  left: 85%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -103,7 +103,7 @@
   const aLight = new THREE.AmbientLight(0xffffff, 0.8);
   const pLight = new THREE.PointLight(0xffffff, 0.9);
 
-  pLight.position.set(0, -30, 10);
+  pLight.position.set(0, -10, 10);
   scene.add(aLight);
   scene.add(pLight);
 
