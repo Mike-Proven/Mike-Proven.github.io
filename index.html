@@ -17,11 +17,11 @@
   <meta name="author" content="Mike Provenzano">
  -->
 
-    <!-- Three.js CDN (jsDelivr) -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
+<!-- Three.js CDN (unpkg) -->
+<script src="https://unpkg.com/three@0.148.0/build/three.min.js"></script>
 
-<!-- OrbitControls (jsDelivr) -->
-<script src="https://cdn.jsdelivr.net/npm/three@0.148.0/examples/js/controls/OrbitControls.js"></script>
+<!-- OrbitControls (unpkg) -->
+<script src="https://unpkg.com/three@0.148.0/examples/js/controls/OrbitControls.js"></script>
 
 
 <style>
@@ -86,7 +86,7 @@
       cube.rotation.x += 0.01;
       //cube.rotation.y += 0.01;
       cube.rotation.z += 0.01;
-      //controls.update();  // only required if controls.enableDamping = true, or if controls.autoRotate = true
+      controls.update();  // only required if controls.enableDamping = true, or if controls.autoRotate = true
       renderer.render(scene, camera);
   }
   animate();
