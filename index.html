@@ -29,6 +29,7 @@
 	position:fixed;
 	top: 0px;
 	left: 0px;
+  border: 0px solid #000;
 }
 
 </style>
@@ -58,7 +59,7 @@
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  camera.position.z = 30;
+  camera.position.z = 3;
 
   // Adding an object (cube)
   const geometry = new THREE.BoxGeometry();
