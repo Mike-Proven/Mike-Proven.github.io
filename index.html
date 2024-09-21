@@ -34,7 +34,7 @@ section {
   margin-top: 15%;
 	position:absolute;
   border: 0px solid #000;
-  left: 50%;
+  left: 20%;
   text-align: center;
   font-family: 'Arial', sans-serif;
   font-size: 1.5em;
@@ -88,15 +88,15 @@ section {
   cube.position.set(0, 2.5, 0);
   scene.add(cube);
 
-  const aLight = new THREE.AmbientLight(0xffffff, 0.8);
-  const pLight = new THREE.PointLight(0xffffff, 0.9);
+  const aLight = new THREE.AmbientLight(0xffffff, 1.0);
+  //const pLight = new THREE.PointLight(0xffffff, 0.9);
 
-  pLight.position.set(0, -5, 5);
+  //pLight.position.set(0, 5, 5);
   scene.add(aLight);
-  scene.add(pLight);
+  //scene.add(pLight);
 
-  const lightHelper = new THREE.PointLightHelper(pLight);
-  scene.add(lightHelper);
+  //const lightHelper = new THREE.PointLightHelper(pLight);
+  //scene.add(lightHelper);
  
   function animate() {
       requestAnimationFrame(animate);
