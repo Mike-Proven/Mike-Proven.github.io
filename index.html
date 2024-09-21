@@ -59,9 +59,11 @@
 
   camera.position.z = 3;
 
+  const meTex = new THREE.TextureLoader().load('profileMJ00.jpg');
+
   // Adding an object (cube)
-  const geometry = new THREE.BoxGeometry();
-  const material = new THREE.MeshStandardMaterial({ color: 0xffff00 });
+  const geometry = new THREE.BoxGeometry(3,3,3);
+  const material = new THREE.MeshBasicMaterial({ map: meTex });
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
 
@@ -74,7 +76,6 @@
 
   const lightHelper = new THREE.PointLightHelper(pLight);
   scene.add(lightHelper);
-
  
   function animate() {
       requestAnimationFrame(animate);
