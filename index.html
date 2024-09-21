@@ -31,6 +31,7 @@
 
 
 section {
+  margin-top: 15%;
 	position:absolute;
   border: 0px solid #000;
   text-align: center;
@@ -73,7 +74,7 @@ section {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  camera.position.z = 7;
+  camera.position.z = 9;
 
   const meTex = new THREE.TextureLoader().load('profileMJ00.jpg');
 
@@ -81,7 +82,7 @@ section {
   const geometry = new THREE.BoxGeometry(3,3,3);
   const material = new THREE.MeshStandardMaterial({ map: meTex });
   const cube = new THREE.Mesh(geometry, material);
-  cube.position.set(-2.5, 2.5, 0);
+  cube.position.set(0, 2.5, 0);
   scene.add(cube);
 
   const aLight = new THREE.AmbientLight(0xffffff, 0.8);
