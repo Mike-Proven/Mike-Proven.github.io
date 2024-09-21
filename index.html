@@ -57,7 +57,7 @@
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  camera.position.z = 20;
+  camera.position.z = 15;
 
   const meTex = new THREE.TextureLoader().load('profileMJ00.jpg');
 
@@ -67,8 +67,8 @@
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
 
-  const aLight = new THREE.AmbientLight(0xffffff, 0.5);
-  const pLight = new THREE.PointLight(0xffffff, 0.7);
+  const aLight = new THREE.AmbientLight(0xffffff, 0.8);
+  const pLight = new THREE.PointLight(0xffffff, 0.9);
 
   pLight.position.set(0, -30, 10);
   scene.add(aLight);
