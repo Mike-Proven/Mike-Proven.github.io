@@ -29,8 +29,17 @@
   border: 0px solid #000;
 }
 
+
+section {
+	position:absolute;
+	top: 0px;
+	left: 0px;
+  border: 0px solid #000;
+}
+
+
 #left {
-  position: absolute;
+  position: relative;
   top: 500px;
   left: 15%;
   transform: translate(-50%, -50%);
@@ -45,7 +54,7 @@
 }
 
 #mid {
-  position: absolute;
+  position: relative;
   top: 500px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -60,7 +69,7 @@
 }
 
 #right {
-  position: absolute;
+  position: relative;
   top: 500px;
   left: 85%;
   transform: translate(-50%, -50%);
@@ -79,7 +88,9 @@
 </head><body style="background-color: #000; color: #fff;"><!-- ^^^ END HEAD ^^^ -->
 <canvas id="canvas"></canvas>
 
-
+<section>
+  <h1>Mike Provenzano</h1>
+  <p>Hobbyist & World Traveler</p>
 <div id="left">
   <h1>PLEASE HIRE ME!!!</h1>
   <p>I don't care if it sounds needy or whatever, I don't have pride, just the desire to make an income doing what interests me and that is learning and growing in skill with creating and understanding cool stuff in programming.</p>
@@ -98,6 +109,7 @@
   <p>I made this for my older students to expand their vocabulary. At the time, this list of the 3,000 most used words in English would have covered 80% of all conversations and 70% of all written material in newspapers and magazines. Now, both the list and method of programming should be updated, but I'm not likely to do that any time soon. However, it is still functional.</p>
 
 </div>
+</section>
 <script>
   const canvas = document.getElementById('canvas');
   const scene = new THREE.Scene();
@@ -106,7 +118,7 @@
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  camera.position.z = 20;
+  camera.position.z = 7;
 
   const meTex = new THREE.TextureLoader().load('profileMJ00.jpg');
 
