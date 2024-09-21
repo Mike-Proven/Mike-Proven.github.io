@@ -77,6 +77,8 @@ section {
   camera.position.z = 9;
 
   const meTex = new THREE.TextureLoader().load('profileMJ00.jpg');
+  const hisMapText = new THREE.TextureLoader().load('historic_world_map.png');
+  scene.background = hisMapText;
 
   // Adding an object (cube)
   const geometry = new THREE.BoxGeometry(3,3,3);
