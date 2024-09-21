@@ -68,11 +68,14 @@
   scene.add(cube);
 
   // OrbitControls
-  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  //const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
   function animate() {
       requestAnimationFrame(animate);
-      controls.update();  // only required if controls.enableDamping = true, or if controls.autoRotate = true
+      cube.rotation.x += 0.01;
+      //cube.rotation.y += 0.01;
+      //cube.rotation.z += 0.01;
+      //controls.update();  // only required if controls.enableDamping = true, or if controls.autoRotate = true
       renderer.render(scene, camera);
   }
   animate();
