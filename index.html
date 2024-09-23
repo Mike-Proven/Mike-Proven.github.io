@@ -73,7 +73,7 @@ section {
   scene.background = meTex;
 
   // Adding an object (cube)
-  const geometry = new THREE.BoxGeometry(3,3,3);
+  const geometry = new THREE.SphereGeometry(5, 32, 32);
   const material = new THREE.MeshStandardMaterial({ map: hisMapTex });
   const cube = new THREE.Mesh(geometry, material);
   cube.position.set(0, -12, 0);
